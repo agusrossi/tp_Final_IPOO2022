@@ -53,7 +53,7 @@ class ResponsableVFinal {
     }
 
     public function __toString() {
-        $cadena = "\nNombre: " . $this->getNombre() . "\nApellido: " . $this->getApellido() . "\nNumero empleado: " . $this->getNumEmpleado() . "\nNumero licencia: " . $this->getNumLicencia() . "\n";
+        $cadena = "\n-----------RESPONSABLE-----------\n" . "\nNombre: " . $this->getNombre() . "\nApellido: " . $this->getApellido() . "\nNumero empleado: " . $this->getNumEmpleado() . "\nNumero licencia: " . $this->getNumLicencia() . "\n";
         return $cadena;
     }
 
@@ -140,7 +140,7 @@ class ResponsableVFinal {
 				VALUES (" . $this->getNumLicencia() . ",'" . $this->getNombre()  . "','" . $this->getApellido() . "')";
 
         if ($base->Iniciar()) {
-          
+
             if ($id = $base->devuelveIDInsercion($consultaInsertar)) {
 
                 $this->setNumEmpleado($id);

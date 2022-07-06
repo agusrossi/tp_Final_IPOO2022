@@ -118,7 +118,7 @@ class PasajeroFinal {
         if ($condicion != "") {
             $consulta = $consulta . ' where ' . $condicion;
         }
-        $consulta .= " order by papellido ";
+        $consulta .= " order by idviaje ";
         //echo $consulta;
         if ($base->Iniciar()) {
             if ($base->Ejecutar($consulta)) {
@@ -205,7 +205,7 @@ class PasajeroFinal {
     }
 
     public function __toString() {
-        $cadena = "Nombre: " . $this->getNombre() . "\nApellido: " . $this->getApellido() . "\nDNI: " . $this->getrdocumento() . "\nptelefono: " . $this->getptelefono() . "\nviaje: " . $this->getObjViaje() . "\n";
+        $cadena =  "\n" . $this->getObjViaje() . "\n-----------PASAJEROS-----------\n" . "Nombre: " . $this->getNombre() . "\nApellido: " . $this->getApellido() . "\nDNI: " . $this->getrdocumento() . "\nptelefono: " . $this->getptelefono() . "\n";
         return $cadena;
     }
 }

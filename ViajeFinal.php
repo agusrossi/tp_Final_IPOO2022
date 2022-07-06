@@ -268,7 +268,7 @@ class ViajeFinal {
     }
 
     function __toString() {
-        $cadena = "\nId viaje: " . $this->getIdViaje() . "\nDestino: " . $this->getVdestino() . "\nCantidad maxima de pasajeros: " . $this->getVcantMaxPasajero() . "\nEmpresa: " . $this->getObjEmpresa() . "\nResponsable: " . $this->getObjResponsableV()->getNombre() . " " . $this->getObjResponsableV()->getApellido() . "\nimporte: " . $this->getVimporte() . "\ntipo asiento: " .  $this->getTipoAsiento() . "\nIda y vuelta: " . $this->getIdayvuelta() . "\n";
+        $cadena = "\n-----------VIAJE-----------\n" . "\nId viaje: " . $this->getIdViaje() . "\nDestino: " . $this->getVdestino() . "\nCantidad maxima de pasajeros: " . $this->getVcantMaxPasajero()  . "\nimporte: " . $this->getVimporte() . "\ntipo asiento: " .  $this->getTipoAsiento() . "\nIda y vuelta: " . $this->getIdayvuelta() . "\n" . $this->getObjEmpresa() .   $this->getObjResponsableV() . "\n";
         return $cadena;
     }
 }

@@ -78,7 +78,7 @@ class Empresa {
     }
 
     public function __toString() {
-        $cadena = "Id empresa: " . $this->getIdempresa() . "\nNombre Empresa: " . $this->getEnombre() . "\n Direccion: " . $this->getEdireccion() . "\n";
+        $cadena = "\n-----------EMPRESA-----------\n" . "Id empresa: " . $this->getIdempresa() . "\nNombre Empresa: " . $this->getEnombre() . "\n Direccion: " . $this->getEdireccion() . "\n";
         return $cadena;
     }
 
